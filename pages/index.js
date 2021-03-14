@@ -9,10 +9,11 @@ import {
 import { getMainData } from '../api/main';
 
 export default function Home({ missions }) {
+
   return (
     <div className={styles.container}>
       <Head>
-        <title>Create Next App</title>
+        <title>SpaceX Dashboard</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <header className={styles.mainHeader}>
@@ -43,14 +44,17 @@ export default function Home({ missions }) {
           />
         </section>
         <section className={styles.missions}>
-          <Cards 
-            imgSrc="https://images2.imgbox.com/a0/cb/s1h2RuR0_o.png"
-            title="FalconSat #1"
-            missionIds={[123456, 123456, 123456]}
-            launch_year={2006}
-            launch_success={true}
-            land_success={true}
-          />
+          {missions.map(mission => {
+            return <Cards 
+              key={mission.launch_date_unix}
+              imgSrc={mission.links.mission_patch_small}
+              title={`${mission.mission_name} #${mission.flight_number}`}
+              missionIds={mission.mission_id}
+              launch_year={mission.launch_year}
+              launch_success={mission.launch_success}
+              land_success={mission.rocket.first_stage.cores[0].land_success}
+            /> 
+          })}
         </section>
       </main>
     </div>
@@ -58,8 +62,7 @@ export default function Home({ missions }) {
 }
 
 export async function getServerSideProps(context) {
-  console.log(context.query);
-  const res = await getMainData();
+  const res = await getMainData(context.query);
 
   if (!res) {
     return {

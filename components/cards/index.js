@@ -29,11 +29,11 @@ const Cards = ({
       </p>
       <p>
         <b>Successful Launch: </b>
-        {launch_success.toString()}
+        {launch_success ? launch_success.toString() : 'false'}
       </p>
       <p>
         <b>Successful Landing: </b>
-        {land_success.toString()}
+        {land_success ? land_success.toString() : 'false'}
       </p>
     </div>
   </div>
