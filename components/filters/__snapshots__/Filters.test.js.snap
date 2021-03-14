@@ -1,0 +1,61 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Snapshot Test - Filters Should show all filters 1`] = `
+<article>
+  <header>
+    Launch Year
+  </header>
+  <hr />
+  <div
+    className="filterCard"
+  >
+    <button
+      className="selected"
+    >
+      2006
+    </button>
+    <button>
+      2007
+    </button>
+    <button>
+      2008
+    </button>
+    <button>
+      2009
+    </button>
+    <button>
+      2010
+    </button>
+    <button>
+      2011
+    </button>
+    <button>
+      2012
+    </button>
+    <button>
+      2013
+    </button>
+    <button>
+      2014
+    </button>
+    <button>
+      2015
+    </button>
+    <button>
+      2016
+    </button>
+    <button>
+      2017
+    </button>
+    <button>
+      2018
+    </button>
+    <button>
+      2019
+    </button>
+    <button>
+      2020
+    </button>
+  </div>
+</article>
+`;
