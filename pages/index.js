@@ -1,3 +1,4 @@
+import React from 'react';
 import Head from 'next/head';
 import styles from '../styles/Home.module.css';
 import Filters from '../components/filters';
@@ -7,12 +8,23 @@ import {
   launchConditions
 } from '../constants';
 import { getMainData } from '../api/main';
+import { useRouter } from 'next/router'
 
 export default function Home({ missions }) {
+
+  const router = useRouter();
+  const [ selectedFilters, setSelectedFilters ] = React.useState({});
+
+  React.useEffect(() => {
+    setSelectedFilters({ ...router.query });
+  }, [router.query])
 
   return (
     <div className={styles.container}>
       <Head>
+      <meta charSet="UTF-8" />
+      <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>SpaceX Dashboard</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
@@ -28,19 +40,19 @@ export default function Home({ missions }) {
             heading="Launch Year"
             _key="launch_year"
             filterData={filtersLaunchYears}
-            selected={2006}
+            selected={parseInt(selectedFilters.launch_year)}
           />
           <Filters 
             heading="Successful Launch"
             _key="launch_success"
             filterData={launchConditions}
-            selected={'True'}
+            selected={selectedFilters.launch_success ? selectedFilters.launch_success.toString() : null}
           />
           <Filters 
             heading="Successful Landing"
             _key="land_success"
             filterData={launchConditions}
-            selected={'True'}
+            selected={selectedFilters.land_success ? selectedFilters.land_success.toString() : null}
           />
         </section>
         <section className={styles.missions}>

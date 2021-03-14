@@ -16,5 +16,5 @@ export const filtersLaunchYears = [
   2020
 ];
 export const launchConditions = [
-  'True', 'False'
+  'true', 'false'
 ];
