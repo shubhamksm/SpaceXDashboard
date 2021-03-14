@@ -5,11 +5,10 @@ import { useRouter } from 'next/router';
 const Filters = ({ heading, _key, filterData, selected }) => {
 
   const router = useRouter();
-  const currentQuery = router.query;
 
   const handleClick = (id, value) => {
     const newQuery = {
-      ...currentQuery,
+      ...router.query,
       [id]: value
     }
     router.push({ pathname: router.pathname, query: newQuery });

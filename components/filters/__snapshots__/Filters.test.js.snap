@@ -11,49 +11,78 @@ exports[`Snapshot Test - Filters Should show all filters 1`] = `
   >
     <button
       className="selected"
+      onClick={[Function]}
     >
       2006
     </button>
-    <button>
+    <button
+      onClick={[Function]}
+    >
       2007
     </button>
-    <button>
+    <button
+      onClick={[Function]}
+    >
       2008
     </button>
-    <button>
+    <button
+      onClick={[Function]}
+    >
       2009
     </button>
-    <button>
+    <button
+      onClick={[Function]}
+    >
       2010
     </button>
-    <button>
+    <button
+      onClick={[Function]}
+    >
       2011
     </button>
-    <button>
+    <button
+      onClick={[Function]}
+    >
       2012
     </button>
-    <button>
+    <button
+      onClick={[Function]}
+    >
       2013
     </button>
-    <button>
+    <button
+      onClick={[Function]}
+    >
       2014
     </button>
-    <button>
+    <button
+      onClick={[Function]}
+    >
       2015
     </button>
-    <button>
+    <button
+      onClick={[Function]}
+    >
       2016
     </button>
-    <button>
+    <button
+      onClick={[Function]}
+    >
       2017
     </button>
-    <button>
+    <button
+      onClick={[Function]}
+    >
       2018
     </button>
-    <button>
+    <button
+      onClick={[Function]}
+    >
       2019
     </button>
-    <button>
+    <button
+      onClick={[Function]}
+    >
       2020
     </button>
   </div>
