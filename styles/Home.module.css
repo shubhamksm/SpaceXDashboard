@@ -5,7 +5,7 @@
 .filters {
   border-radius: 15px;
   width: 200px;
-  height: 550px;
+  height: fit-content;
   padding: 10px;
   margin: 0px auto;
   background-color: #fff;
@@ -13,4 +13,28 @@
 
 .filters article header {
   text-align: center;
+}
+
+.missions {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-gap: 20px;
+}
+
+/* Media Queries */
+@media (max-width: 700px) {
+  .filters {
+    width: 296px;
+  }
+
+  .missions {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (min-width: 700px) and (max-width: 1024px) {
+  .missions {
+    grid-template-columns: 1fr 1fr;
+  }
 }

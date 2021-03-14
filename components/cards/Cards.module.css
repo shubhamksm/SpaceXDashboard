@@ -1,0 +1,11 @@
+.card {
+  border-radius: 15px;
+  padding: 20px;
+  width: auto;
+  margin: auto;
+  background-color: #fff;
+}
+
+.imgBox {
+  background-color: #d7dbdd;
+}

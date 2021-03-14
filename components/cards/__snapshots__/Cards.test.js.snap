@@ -1,0 +1,57 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Snapshot Test - Cards Should display mission details 1`] = `
+<div
+  className="card"
+>
+  <div>
+    <div
+      className="imgBox"
+    >
+      <img
+        alt="mission picture"
+        src="https://images2.imgbox.com/a0/cb/s1h2RuR0_o.png"
+      />
+    </div>
+    <h4>
+      FalconSat #1
+    </h4>
+  </div>
+  <div>
+    <p>
+      <b>
+        Mission Ids: 
+      </b>
+    </p>
+    <ul>
+      <li>
+        123456
+      </li>
+      <li>
+        123456
+      </li>
+      <li>
+        123456
+      </li>
+    </ul>
+    <p>
+      <b>
+        Launch Year: 
+      </b>
+      2006
+    </p>
+    <p>
+      <b>
+        Successful Launch: 
+      </b>
+      true
+    </p>
+    <p>
+      <b>
+        Successful Landing: 
+      </b>
+      true
+    </p>
+  </div>
+</div>
+`;

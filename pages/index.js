@@ -1,6 +1,7 @@
 import Head from 'next/head';
 import styles from '../styles/Home.module.css';
 import Filters from '../components/filters';
+import Cards from '../components/cards';
 import {
   filtersLaunchYears,
   launchConditions
@@ -39,6 +40,16 @@ export default function Home({ missions }) {
             _key="land_success"
             filterData={launchConditions}
             selected={'True'}
+          />
+        </section>
+        <section className={styles.missions}>
+          <Cards 
+            imgSrc="https://images2.imgbox.com/a0/cb/s1h2RuR0_o.png"
+            title="FalconSat #1"
+            missionIds={[123456, 123456, 123456]}
+            launch_year={2006}
+            launch_success={true}
+            land_success={true}
           />
         </section>
       </main>
