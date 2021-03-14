@@ -1,10 +1,15 @@
 # SpaceX-Dashboard
+## Access deployed URL here
+https://spacex--dashboard.herokuapp.com/
 
 ## Getting Started
 
-First, run the development server:
+First, install dependencies and then start server
 
 ```bash
+npm run install
+# then
+
 npm run dev
 # or
 yarn dev
