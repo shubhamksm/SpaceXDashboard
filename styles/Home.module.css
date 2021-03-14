@@ -1,0 +1,16 @@
+.mainHeader {
+  padding-left: 20px;
+}
+
+.filters {
+  border-radius: 15px;
+  width: 200px;
+  height: 550px;
+  padding: 10px;
+  margin: 0px auto;
+  background-color: #fff;
+}
+
+.filters article header {
+  text-align: center;
+}

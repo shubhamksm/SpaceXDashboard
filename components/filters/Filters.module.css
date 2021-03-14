@@ -1,0 +1,19 @@
+.filterCard {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 20px;
+  margin-bottom: 15px;
+}
+
+.selected {
+  background-color: #a3c03e !important;
+}
+
+.filterCard button {
+  width: 75px;
+  height: 28px;
+  margin: auto;
+  background-color: #e0f39f;
+  border: none;
+  border-radius: 5px;
+}

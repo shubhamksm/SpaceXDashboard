@@ -1,5 +1,6 @@
-import Head from 'next/head'
-import styles from '../styles/Home.module.css'
+import Head from 'next/head';
+import styles from '../styles/Home.module.css';
+import Filters from '../components/filters';
 import {
   filtersLaunchYears,
   launchConditions
@@ -7,59 +8,40 @@ import {
 import { getMainData } from '../api/main';
 
 export default function Home({ missions }) {
-
-  // console.log(missions);
-
   return (
     <div className={styles.container}>
       <Head>
         <title>Create Next App</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <header>
+      <header className={styles.mainHeader}>
         <h2>SpaceX Launch Programs</h2>
       </header>
       <main>
-        <section>
+        <section className={styles.filters}>
           <header>
             <h3>Filters</h3>
           </header>
-          <article>
-            <header>
-              Launch Year
-            </header>
-            <hr />
-            <div class="filter-card">
-              {filtersLaunchYears.map(year => {
-                return <button>{year}</button>
-              })}
-            </div>
-          </article>
-          <article>
-            <header>
-              Successful Launch
-            </header>
-            <hr />
-            <div class="filter-card">
-              <button>True</button>
-              <button>False</button>
-            </div>
-          </article>
-          <article>
-            <header>
-              Successful Landing
-            </header>
-            <hr />
-            <div class="filter-card">
-              <button>True</button>
-              <button>False</button>
-            </div>
-          </article>
+          <Filters 
+            heading="Launch Year"
+            _key="launch_year"
+            filterData={filtersLaunchYears}
+            selected={2006}
+          />
+          <Filters 
+            heading="Successful Launch"
+            _key="launch_success"
+            filterData={launchConditions}
+            selected={'True'}
+          />
+          <Filters 
+            heading="Successful Landing"
+            _key="land_success"
+            filterData={launchConditions}
+            selected={'True'}
+          />
         </section>
       </main>
-      <footer>
-        Developed By: Shubham Khandelwal
-      </footer>
     </div>
   )
 }
