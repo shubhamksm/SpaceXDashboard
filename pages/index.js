@@ -69,6 +69,9 @@ export default function Home({ missions }) {
           })}
         </section>
       </main>
+      <footer className={styles.footer}>
+        Developed By: Shubham Khandelwal
+      </footer>
     </div>
   )
 }

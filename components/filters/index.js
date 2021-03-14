@@ -11,6 +11,9 @@ const Filters = ({ heading, _key, filterData, selected }) => {
       ...router.query,
       [id]: value
     }
+    if(selected === value) {
+      delete newQuery[id];
+    }
     router.push({ pathname: router.pathname, query: newQuery });
   }
 
